@@ -1,1 +1,0 @@
-git add . && git commit -m "." && git switch main && git merge dev && git push
