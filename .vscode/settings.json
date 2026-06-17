@@ -1,0 +1,10 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    ".cache": true,
+    ".github": true,
+    ".gitignore": true,
+    "CNAME": true,
+    "LICENSE": true,
+  },
+} 

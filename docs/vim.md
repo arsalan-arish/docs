@@ -1,4 +1,4 @@
-# VIM Motion Shortcuts
+# Vim Motion Shortcuts
 
 ## General
 
@@ -20,20 +20,33 @@
 - 'O' to insert one line above
 - '.' to repeat an operation on a word.
 - 'u' to undo and ''ctrl+r' to redo. 'U' to undo the line
+- '%' to jump between the starting and ending brackets, if the cursor is on either
 
 ## Copy/Paste
 
 - 'y' to copy and 'p' to paste: by default it does these ops from the unnamed register, to do from a specific register, prefix these commands with "\<reg\>. e.g => prefix with "+ to do from system clipboard.
 - 'yy' to copy a line, and 'p' then to paste it on the line below the cursor
+- 'yiw' to copy the word under cursor
 
 ## Modification
 
 - 'ciw' for change in word.
+- 'j' to join the current and the next line.  
+Alternatively, select the lines and press 'j' to join them
+- '~' to toggle the case of the letter (upper and lower).  
+'gUw' to upper the word  
+'guw' to lower the word
+'gUU' to uppet the line
+'guu' to lower the line
+- 'Ctrl+A' to increment the number under the cursor and 'Ctrl+Z' to decrement.
 
 ## Selection
 
+- 'v' for visual mode and 'Ctrl+v' for Visual block mode
+- Press 'I' or 'A' to insert or append in visual block mode
 - 'yi\<bracket\>' to select all text between the brackets
 - 'ya\<bracket\>' to select text including the brackets
+- 'gv' to reselect the last selection
 
 ## Deletion
 
@@ -73,3 +86,37 @@ then '`\<char\>' to jump the the bookmark location
 
 - :set number
 - :set relativenumber
+
+## Indenting
+
+- '==' to indent a line automatically  
+Select lines and '=' to indent them automatically. '.' to repeat
+- '>>' to indent 2 spaces forward and '<<' to indent 2 spaces backward.  
+Select lines and '>' or '<' to indent specifically. '.' to repeat
+
+## Macro Recording
+
+- 'q' and letter to start recording keypresses into the buffer with that letter. Press 'q' again to stop it.
+- '@' and letter to apply that macro recorded keys in the letter buffer from the current cursor position
+
+## Extras
+
+- ':sort' to semantically sort the file.  
+':sort!' to sort reversed
+- ':read \<path\>' to read an external file and write it on the cursor pos
+- ':read !\<cmd\> to read from the stdout of an external CLI command
+- ':jq .\<keyName\>' to use json query and write the value of the key in the cursor pos
+- ':s/\<pattern\>/\<replacement\>' to change occurence of a pattern, s stands for substitute  
+Add '/g' in the end to replace all occurences in the current line  
+Add '/d' in the end to delete the pattern  
+- ':g/\<pattern\>/\<replacement\>' to do the same to the whole file
+- ':v/\<pattern\>/\<replacement\>' to delete the lines NOT matching the pattern
+- ':reg' to view all the registers
+- 'gx' to open the link under the cursor in browser
+- 'gf' to open the filepath under the cursor in a new tab
+- ':\<lineNumber\> to jump to the line
+
+## NeoVim
+
+- 'mksession \<filename\>' to save the whole IDE instance state
+- 'source \<filename\>' to load that session back
