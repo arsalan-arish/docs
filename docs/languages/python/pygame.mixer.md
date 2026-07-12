@@ -1,3 +1,5 @@
+# pygame.mixer
+
 **Engine config**
 - pygame.mixer.init()  
 - pygame.mixer.get_init() -> bool  

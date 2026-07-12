@@ -36,7 +36,8 @@ site_author = "Arsalan Arish"
 copyright = """
 Copyright &copy; 2026 Arsalan Arish
 """
-
+extra_css = ["stylesheets/extra.css"]
+extra_javascript = ["javascripts/extra.js"]
 # Zensical supports both implicit navigation and explicitly defined navigation.
 # If you decide not to define a navigation here then Zensical will simply
 # derive the navigation structure from the directory structure of your

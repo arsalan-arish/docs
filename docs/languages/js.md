@@ -1,4 +1,4 @@
-# JavaScript  
+# JS
 
 ## Data types  
 ### Primitives  

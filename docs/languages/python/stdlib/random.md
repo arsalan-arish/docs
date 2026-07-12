@@ -1,3 +1,4 @@
+# random
 
 - random.seed(10) # The default seed is random on time
 - random.randint(a, b) # inclusive
